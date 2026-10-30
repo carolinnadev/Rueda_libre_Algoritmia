@@ -154,3 +154,22 @@ Para cumplir con la regla de redondear hacia arriba a la centena (ej: $71.500 o 
 | Verdadero | Falso | Verdadero |
 | Falso | Verdadero | Verdadero |
 | Falso | Falso | Falso |
+
+
+
+---
+
+## 🛡️ MiniReto 6 · Reservas sin errores: validar los datos
+
+### 1. Aplicación de Leyes de De Morgan en Validaciones
+* **Condición de Entrada Válida:** `horas > 0 Y cantBicicletas > 0`
+* **Condición de Error (Negación total):** `NO (horas > 0 Y cantBicicletas > 0)`
+* **Equivalente de De Morgan:** `(horas <= 0) O (cantBicicletas <= 0)`
+* **Justificación:** Si las horas son menores o iguales a 0, **O** si la cantidad de bicicletas es menor o igual a 0, la entrada es completamente inválida y el algoritmo debe rechazar el procesamiento.
+
+### 2. Tabla de Pruebas de Validación
+| Horas Ingresadas | Bicicletas Ingresadas | ¿Es Válido? | Mensaje del Sistema |
+| :---: | :---: | :---: | :--- |
+| 3 | 2 | ✅ Sí | Procesa la cotización correctamente. |
+| 0 | 2 | ❌ No | Error: La cantidad de horas debe ser mayor a 0. |
+| 2 | -1 | ❌ No | Error: La cantidad de bicicletas debe ser mayor a 0. |
