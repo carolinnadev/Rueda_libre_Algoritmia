@@ -207,3 +207,21 @@ Cuando la persona de taquilla ingresa el tipo de bicicleta, el sistema evalúa o
 | 1 | Carlos | 20 / S | Urbana (1) | 3 h | Total: $30.000 (Sin desc.) | $30.000 | ✅ Correcto |
 | 2 | Andrea | 16 / S | Eléctrica (2) | 5 h | Sub: $200.000 - Desc(10%): $20.000 = **$180.000** | $180.000 | ✅ Correcto |
 | 3 | Mateo | 25 / N | MTB (1) | 2 h | **Acceso denegado** (Sin documento) | Acceso denegado | ✅ Correcto |
+
+
+---
+
+## 💰 MiniReto 9 · Cierre de caja (Centinela y Acumuladores)
+
+### 1. Definición de Variables de Control
+* **Centinela (`continuar`):** Variable de tipo carácter o entero que decide si el ciclo se repite. Mientras sea diferente de una opción de salida (ej. "N"), el sistema sigue pidiendo alquileres.
+* **Acumulador (`recaudoTotal`):** Suma progresivamente el valor de cada transacción del día. Su estructura es `recaudoTotal <- recaudoTotal + totalAlquiler`.
+* **Contador (`totalTransacciones`):** Incrementa en 1 por cada alquiler registrado exitosamente (`totalTransacciones <- totalTransacciones + 1`).
+
+### 2. Tabla de Traza del Ciclo (Ejemplo con 2 transacciones)
+| Ciclo / Acción | Entrada (`continuar`) | Transacción (`total`) | `recaudoTotal` (Acumulador) | `totalTransacciones` (Contador) |
+| :---: | :---: | :---: | :---: | :---: |
+| Inicio | "S" | - | 0 | 0 |
+| Transacción 1 | "S" | $30.000 | 30.000 | 1 |
+| Transacción 2 | "N" | $20.000 | 50.000 | 2 |
+| Fin del Ciclo | Salida | - | $50.000 (Cierre final) | 2 |
