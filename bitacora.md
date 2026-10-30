@@ -173,3 +173,18 @@ Para cumplir con la regla de redondear hacia arriba a la centena (ej: $71.500 o 
 | 3 | 2 | ✅ Sí | Procesa la cotización correctamente. |
 | 0 | 2 | ❌ No | Error: La cantidad de horas debe ser mayor a 0. |
 | 2 | -1 | ❌ No | Error: La cantidad de bicicletas debe ser mayor a 0. |
+
+
+---
+
+## 📊 MiniReto 7 · Tarifas claras: la tabla de decisión
+
+### 1. Tabla de Decisión de Tarifas por Tipo de Bicicleta
+| Tipo de Bicicleta (`tipoBici`) | Características | Valor por Hora (`valorHora`) |
+| :--- | :--- | :--- |
+| `1` o "Urbana" | Estándar para ciudad, casco y candado incluidos. | $10.000 |
+| `2` o "Electrica" | Asistencia de pedaleo, mayor rendimiento. | $20.000 |
+| `3` o "MTB" | Montañera, ideal para recorridos complejos. | $15.000 |
+
+### 2. Análisis del Flujo de Decisión Múltiple
+Cuando la persona de taquilla ingresa el tipo de bicicleta, el sistema evalúa opciones en cadena. Si no coincide con ninguna de las opciones válidas, se activa una rama de error por opción no encontrada.
