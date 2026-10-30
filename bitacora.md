@@ -108,3 +108,27 @@ Al simular el proceso de forma estrictamente literal con un compañero, se encon
 * **Óvalos (Inicio / Fin):** Delimitan el comienzo y cierre del flujo lógico del algoritmo.
 * **Paralelogramos (Entrada / Salida):** Utilizados para leer las variables ingresadas por el usuario (`Leer`) y para mostrar los resultados en pantalla (`Escribir`).
 * **Rectángulos (Proceso):** Utilizados para las operaciones matemáticas (`total`, `anticipo`, `saldo`).
+
+
+
+---
+
+## 📦 MiniReto 4 · Asistente de taquilla v0.1 (Cuenta del Grupo)
+
+### 1. Descomposición del Problema (Pasos Secuenciales)
+1. **Entrada de datos:** Leer cantidad de bicicletas urbanas, horas de alquiler, precio del recorrido guiado por persona y cantidad de personas del grupo.
+2. **Cálculo de bicicletas:** `valorBicicletas <- cantBicicletas * horasBici * VALOR_HORA_BICI`
+3. **Cálculo de recorridos:** `valorRecorrido <- precioRecorrido * personas`
+4. **Subtotal:** `subtotal <- valorBicicletas + valorRecorrido`
+5. **Aporte voluntario:** `aporteVoluntario <- subtotal * 0.10` (se toma la parte entera con `trunc`).
+6. **Total general:** `total <- subtotal + trunc(aporteVoluntario)`
+7. **División y Redondeo por Persona:** `valorPorPersona <- trunc((total / personas + 99) / 100) * 100` (asegura que sea múltiplo de 100 hacia arriba).
+
+### 2. Explicación de la Fórmula de Redondeo a la Centena
+Para cumplir con la regla de redondear hacia arriba a la centena (ej: $71.500 o $90.800), se divide el total entre las personas, se le suman 99 para desplujar el residuo hacia la siguiente centena, se aplica `trunc` para eliminar decimales y se multiplica por 100. Esto garantiza que el valor cobrado nunca sea inferior al exacto.
+
+### 3. Casos de Prueba Registrados
+* **Caso 1:** 3 personas, 3 bicicletas por 2 horas y *Río y Parques* ($45.000).
+  * *Total esperado:* $214.500 | *Valor por persona:* $71.500
+* **Caso 2:** 4 personas, 3 bicicletas por 3 horas y *Sabores de Barrio* ($60.000).
+  * *Total esperado:* $363.000 | *Valor por persona:* $90.800
