@@ -188,3 +188,22 @@ Para cumplir con la regla de redondear hacia arriba a la centena (ej: $71.500 o 
 
 ### 2. Análisis del Flujo de Decisión Múltiple
 Cuando la persona de taquilla ingresa el tipo de bicicleta, el sistema evalúa opciones en cadena. Si no coincide con ninguna de las opciones válidas, se activa una rama de error por opción no encontrada.
+
+
+---
+
+## 🚀 MiniReto 8 · Asistente de taquilla v0.2 (Cotizador con Reglas)
+
+### 1. Resumen de Reglas Integradas
+* **Validación de Identidad:** Exige documento válido (`S`). Si es menor de 18 años, requiere autorización firmada.
+* **Validación de Cantidades:** Verifica que las horas y la cantidad de bicicletas sean mayores a 0.
+* **Tarifas Diferenciadas:** Urbana ($10.000/h), Eléctrica ($20.000/h), MTB ($15.000/h).
+* **Descuento por Larga Duración:** Se aplica un **10% de descuento** sobre el subtotal si el tiempo de alquiler es de **5 horas o más**.
+
+### 2. Tabla de Casos de Prueba (Versión v0.2)
+
+| Caso | Cliente | Edad / Aut. | Bici / Cantidad | Horas | Resultado Esperado | Resultado PSeInt | Estado |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | Carlos | 20 / S | Urbana (1) | 3 h | Total: $30.000 (Sin desc.) | $30.000 | ✅ Correcto |
+| 2 | Andrea | 16 / S | Eléctrica (2) | 5 h | Sub: $200.000 - Desc(10%): $20.000 = **$180.000** | $180.000 | ✅ Correcto |
+| 3 | Mateo | 25 / N | MTB (1) | 2 h | **Acceso denegado** (Sin documento) | Acceso denegado | ✅ Correcto |

@@ -31,3 +31,5 @@ Para probar y ejecutar estos códigos de manera local:
 3. Clona este repositorio o descarga los archivos:
    ```bash
    git clone [https://github.com/carolinnadev/rueda-libre-algoritmia.git](https://github.com/carolinnadev/rueda-libre-algoritmia.git)
+
+   * **MiniReto 5 a 8 (Semana 2):** Implementación de estructuras de decisión (`Si-Entonces`, `Segun`), validaciones de seguridad con leyes de De Morgan, tarifas diferenciadas y lanzamiento del **Asistente de Taquilla v0.2** con descuentos automáticos.
