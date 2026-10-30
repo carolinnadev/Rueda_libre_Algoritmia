@@ -57,3 +57,32 @@ Al simular el proceso de forma estrictamente literal con un compañero, se encon
 * **Reconocimiento de patrones:** Se identificó que cada vez que llega un cliente se repite una estructura cíclica común: capturar datos $\rightarrow$ validar recursos $\rightarrow$ procesar pago $\rightarrow$ entregar producto.
 * **Abstracción:** Se eliminaron detalles irrelevantes para el sistema lógico de la taquilla, tales como la marca de la ropa del cliente, el clima exacto del día o el color de los cascos disponibles en la bodega.
 * **Diseño del algoritmo:** Es la secuencia lógica paso a paso reflejada en la **Versión 2**, lista para convertirse posteriormente en código ejecutable.
+
+
+
+---
+
+## 💻 MiniReto 2 · La primera cotización en PSeInt
+
+### 1. Modelo Entrada – Proceso – Salida (EPS)
+
+| Entrada (Variables y Tipos) | Proceso (Operaciones y Fórmulas) | Salida (Resultados Muestra) |
+| :--- | :--- | :--- |
+| • `nombre` (Caracter)<br>• `horas` (Entero) | • Definir constante `VALOR_HORA <- 10000`<br>• `total <- horas * VALOR_HORA` | • Mensaje: "Hola, [nombre]: tu alquiler de [horas] horas cuesta $[total]" |
+
+---
+
+### 2. Casos de Prueba (Ejecución vs. Esperado)
+
+| Caso | Entrada (Horas) | Resultado Esperado (A mano) | Resultado Obtenido (PSeInt) | Estado |
+| :---: | :---: | :---: | :---: | :---: |
+| 1 | 1 hora | $10.000 | $10.000 | ✅ Correcto |
+| 2 | 3 horas | $30.000 | $30.000 | ✅ Correcto |
+| 3 | 8 horas | $80.000 | $80.000 | ✅ Correcto |
+
+---
+
+### 3. Registro de Casos Borde / Pendientes para Semana 2
+* **Ingreso de 0 horas:** El sistema calcula $0, lo cual no es lógico para un alquiler.
+* **Ingreso de horas negativas (ej. -2):** El sistema calcula un total negativo (-$20.000), lo que representa una falla lógica.
+* **Solución pendiente:** Estos casos se controlarán en la **Semana 2** utilizando condicionales (`Si ... Entonces`).
