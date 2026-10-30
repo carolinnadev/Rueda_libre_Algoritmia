@@ -227,6 +227,6 @@ Cuando la persona de taquilla ingresa el tipo de bicicleta, el sistema evalúa o
 | Fin del Ciclo | Salida | - | $50.000 (Cierre final) | 2 |
 
 
-git add algoritmos/08_cierre_caja.psc bitacora.md
-git commit -m "feat(algoritmos): agrega 08_cierre_caja.psc con ciclos centinela, acumuladores y bitacora del MiniReto 9"
+git add algoritmos/09_revision_flota.psc bitacora.md
+git commit -m "feat(algoritmos): agrega 09_revision_flota.psc con banderas, intentos limitados y maximos"
 git push origin main
