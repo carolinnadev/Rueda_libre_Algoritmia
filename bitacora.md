@@ -86,3 +86,25 @@ Al simular el proceso de forma estrictamente literal con un compañero, se encon
 * **Ingreso de 0 horas:** El sistema calcula $0, lo cual no es lógico para un alquiler.
 * **Ingreso de horas negativas (ej. -2):** El sistema calcula un total negativo (-$20.000), lo que representa una falla lógica.
 * **Solución pendiente:** Estos casos se controlarán en la **Semana 2** utilizando condicionales (`Si ... Entonces`).
+
+
+---
+
+## 🗺️ MiniReto 3 · Recorridos guiados y diagrama de flujo
+
+### 1. Prueba de Escritorio (Caso: 4 personas en Sabores de Barrio)
+| Paso / Instrucción | `nombreRecorrido` | `precioPersona` | `personas` | `total` | `anticipo` | `saldo` |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `Leer nombreRecorrido` | "Sabores de Barrio" | - | - | - | - | - |
+| `Leer precioPersona` | "Sabores de Barrio" | 60000 | - | - | - | - |
+| `Leer personas` | "Sabores de Barrio" | 60000 | 4 | - | - | - |
+| `total <- precioPersona * personas` | "Sabores de Barrio" | 60000 | 4 | 240000 | - | - |
+| `anticipo <- redon(total * 0.30)` | "Sabores de Barrio" | 60000 | 4 | 240000 | 72000 | - |
+| `saldo <- total - anticipo` | "Sabores de Barrio" | 60000 | 4 | 240000 | 72000 | 168000 |
+
+---
+
+### 2. Identificación de Símbolos en el Diagrama de Flujo
+* **Óvalos (Inicio / Fin):** Delimitan el comienzo y cierre del flujo lógico del algoritmo.
+* **Paralelogramos (Entrada / Salida):** Utilizados para leer las variables ingresadas por el usuario (`Leer`) y para mostrar los resultados en pantalla (`Escribir`).
+* **Rectángulos (Proceso):** Utilizados para las operaciones matemáticas (`total`, `anticipo`, `saldo`).
