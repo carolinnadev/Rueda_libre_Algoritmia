@@ -132,3 +132,25 @@ Para cumplir con la regla de redondear hacia arriba a la centena (ej: $71.500 o 
   * *Total esperado:* $214.500 | *Valor por persona:* $71.500
 * **Caso 2:** 4 personas, 3 bicicletas por 3 horas y *Sabores de Barrio* ($60.000).
   * *Total esperado:* $363.000 | *Valor por persona:* $90.800
+
+
+
+  ---
+
+## 🚦 MiniReto 5 · ¿Quién puede alquilar? De la regla a la condición
+
+### 1. Análisis de Reglas de Negocio (Proposiciones)
+* **Regla 1:** El usuario debe ser mayor de edad o contar con autorización firmada.
+  * *Proposición P:* `edad >= 18`
+  * *Proposición Q:* `tieneAutorizacion == "S"`
+  * *Condición lógica:* `P O Q` (`edad >= 18 O tieneAutorizacion == "S"`)
+* **Regla 2:** El usuario debe presentar un documento de identidad válido.
+  * *Condición lógica:* `tieneDocumento == "S"`
+
+### 2. Tabla de Verdad de la Validación de Alquiler (`edad >= 18 O tieneAutorizacion`)
+| Edad >= 18 (`P`) | Tiene Autorización (`Q`) | ¿Puede Alquilar? (`P O Q`) |
+| :---: | :---: | :---: |
+| Verdadero | Verdadero | Verdadero |
+| Verdadero | Falso | Verdadero |
+| Falso | Verdadero | Verdadero |
+| Falso | Falso | Falso |
