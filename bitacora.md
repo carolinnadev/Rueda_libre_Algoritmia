@@ -227,6 +227,15 @@ Cuando la persona de taquilla ingresa el tipo de bicicleta, el sistema evalúa o
 | Fin del Ciclo | Salida | - | $50.000 (Cierre final) | 2 |
 
 
-git add algoritmos/09_revision_flota.psc bitacora.md
-git commit -m "feat(algoritmos): agrega 09_revision_flota.psc con banderas, intentos limitados y maximos"
-git push origin main
+---
+
+## 🚀 MiniReto 12 · Asistente de Taquilla v1.0 (Producto Final)
+
+### 1. Árbol de Componentes y Descomposición por SubProcesos
+* **`FuncionBienvenida`**: Muestra la interfaz inicial del sistema y el menú principal del día.
+* **`SubProceso CotizarAlquiler`**: Gestiona de forma encapsulada la selección de bicicletas, validación de horas y cálculo de subtotales con descuentos.
+* **`SubProceso MostrarCierreCaja`**: Presenta los acumuladores totales de transacciones y el recaudo final al terminar el turno de la taquilla.
+
+### 2. Conclusión del Proyecto v1.0
+El Asistente de Taquilla Rueda Libre v1.0 integra algoritmos secuenciales, estructuras de decisión avanzadas, validaciones con leyes de De Morgan, ciclos de control para turnos de trabajo y modularización por SubProcesos, estandarizando por completo la operación del negocio en Medellín.
+
