@@ -1,4 +1,4 @@
-cat << 'EOF' > README.md
+
 # 🚲 Asistente de Taquilla - Rueda Libre (v1.0 - Producto Final)
 
 Repositorio oficial del proyecto de algoritmos y lógica de programación para **Rueda Libre**, el emprendimiento de Medellín enfocado en el alquiler de bicicletas y la organización de recorridos guiados.
